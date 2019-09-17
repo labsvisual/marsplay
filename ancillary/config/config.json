@@ -1,0 +1,40 @@
+{
+    "persistence": {
+        "postgres": {
+            "development": {
+                "username": {
+                    "$env": "PERSISTENCE_POSTGRES_USER",
+                    "$default": "root"
+                },
+                "password": {
+                    "$env": "PERSISTENCE_POSTGRES_PASSWORD",
+                    "$default": "password"
+                },
+                "database": {
+                    "$env": "PERSISTENCE_POSTGRES_DB",
+                    "$default": "marsplay_dev"
+                },
+                "host": {
+                    "$env": "PERSISTENCE_POSTGRES_HOST",
+                    "$default": "127.0.0.1"
+                },
+                "dialect": "postgres"
+            },
+            "production": {
+                "username": {
+                    "$env": "PERSISTENCE_POSTGRES_USER"
+                },
+                "password": {
+                    "$env": "PERSISTENCE_POSTGRES_PASSWORD"
+                },
+                "database": {
+                    "$env": "PERSISTENCE_POSTGRES_DB"
+                },
+                "host": {
+                    "$env": "PERSISTENCE_POSTGRES_HOST"
+                },
+                "dialect": "postgres"
+            }
+        }
+    }
+}
